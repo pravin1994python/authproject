@@ -1,4 +1,4 @@
-"""authproject URL Configuration
+"""cookieproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,13 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
+from django.conf.urls import url
 from django.contrib import admin
 from testapp import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^info/', views.homepage_view),
-    url(r'^java/', views.javapage_view),
-    url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'^request/', views.name_view),
+    url(r'^age/', views.age_view),
+    url(r'^result/', views.result_view)
 ]
